@@ -12,4 +12,12 @@ export class ProductService {
   getProducts(): Product[] {
     return PRODUCTS;
   }
+
+  getFeaturedProduct(): Product {
+    return PRODUCTS.filter((product) => product.featured)[0];
+  }
+
+  getProduct(id: string): Product {
+    return PRODUCTS.filter(product=> product.id === id)[0];
+  }
 }

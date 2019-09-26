@@ -1,0 +1,49 @@
+<div class="container" fxLayout="row" fxLayout.sm="column" fxLayout.xs="column"
+ fxLayoutAlign.gt-mad="space-around center" fxLayoutGap="10px">
+
+<mat-card fxFlex *ngIf="newProduct">
+        <mat-card-header>
+            <div mat-card-avatar></div>
+            <mat-card-title>
+                <h3>{{newProduct.name | uppercase}}</h3>
+            </mat-card-title>
+        </mat-card-header>
+        <img mat-card-image src={{newProduct.image}}>
+        <mat-card-content>
+            <p>
+                    {{newProduct.description}}
+            </p>
+        </mat-card-content>
+    </mat-card>
+
+ <mat-card fxFlex *ngIf="hotProduct">
+        <mat-card-header>
+                <div mat-card-avatar></div>
+                <mat-card-title>
+                    <h3>{{hotProduct.name | uppercase}}</h3>
+                </mat-card-title>
+            </mat-card-header>
+            <img mat-card-image src={{hotProduct.image}}>
+            <mat-card-content>
+                <p>
+                    {{hotProduct.description}}
+                </p>
+            </mat-card-content>
+</mat-card>
+
+<mat-card fxFlex *ngIf="featuredProduct">
+        <mat-card-header>
+                <div mat-card-avatar></div>
+                <mat-card-title>
+                    <h3>{{featuredProduct.name | uppercase}}</h3>
+                </mat-card-title>
+            </mat-card-header>
+            <img mat-card-image src={{featuredProduct.image}}>
+            <mat-card-content>
+                <p>
+                    {{featuredProduct.description}}
+                </p>
+            </mat-card-content>
+</mat-card>
+
+</div>

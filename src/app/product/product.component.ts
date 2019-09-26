@@ -18,10 +18,4 @@ export class ProductComponent implements OnInit {
   ngOnInit() {
     this.products = this.productService.getProducts();
   }
-
-  onSelect(product: Product){
-    this.selectedProduct = product;
-  }
-
-
 }
